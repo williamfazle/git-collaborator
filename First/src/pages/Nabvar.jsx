@@ -1,4 +1,15 @@
+import { NavLink } from "react-router-dom";
+
 const Nabvar = () => {
+
+    const menuItems = (
+        <>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/products">Products</NavLink></li>
+            <li><NavLink to="/contact">Contact</NavLink></li>
+        </>
+    );
+    
     return (
         <div className="bg-base-200 shadow-sm">
             <div className="navbar mx-auto w-full max-w-7xl px-4 sm:px-6">
@@ -24,9 +35,7 @@ const Nabvar = () => {
                             tabIndex={0}
                             className="menu menu-sm dropdown-content z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
                         >
-                            <li><a>Home</a></li>
-                            <li><a>Products</a></li>
-                            <li><a>Contact</a></li>
+                            {menuItems}
                         </ul>
                     </div>
                     <a className="btn btn-ghost text-xl">daisyUI</a>
@@ -34,9 +43,7 @@ const Nabvar = () => {
 
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li><a>Home</a></li>
-                        <li><a>Products</a></li>
-                        <li><a>Contact</a></li>
+                        {menuItems}
                     </ul>
                 </div>
 

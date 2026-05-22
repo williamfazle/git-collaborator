@@ -1,5 +1,5 @@
 import Banner from "./Banner";
-import Nabvar from "../../layout/Nabvar";
+import Nabvar from "../Nabvar";
 import Products from "./Products";
 
 
