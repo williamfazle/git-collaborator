@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   FaFacebook,
   FaTwitter,
@@ -8,15 +9,14 @@ import {
 const Footer = () => {
   return (
     <footer className="bg-base-200 text-base-content">
-      <div className="footer sm:footer-horizontal p-10 max-w-7xl mx-auto">
-        {/* Brand */}
+      <div className="footer mx-auto max-w-7xl p-10 sm:footer-horizontal">
         <aside>
           <h2 className="text-3xl font-bold">ShopHub</h2>
           <p className="max-w-xs">
             Your trusted destination for quality products at affordable prices.
           </p>
 
-          <div className="flex gap-4 mt-4 text-xl">
+          <div className="mt-4 flex gap-4 text-xl">
             <a href="#">
               <FaFacebook />
             </a>
@@ -32,25 +32,22 @@ const Footer = () => {
           </div>
         </aside>
 
-        {/* Quick Links */}
         <nav>
           <h6 className="footer-title">Quick Links</h6>
-          <a className="link link-hover">Home</a>
-          <a className="link link-hover">Products</a>
-          <a className="link link-hover">Categories</a>
-          <a className="link link-hover">Offers</a>
+          <Link to="/" className="link link-hover">Home</Link>
+          <Link to="/products" className="link link-hover">Products</Link>
+          <Link to="/deals" className="link link-hover">Deals</Link>
+          <Link to="/cart" className="link link-hover">Cart</Link>
         </nav>
 
-        {/* Customer Service */}
         <nav>
           <h6 className="footer-title">Customer Service</h6>
-          <a className="link link-hover">Contact Us</a>
+          <Link to="/contact" className="link link-hover">Contact Us</Link>
           <a className="link link-hover">FAQs</a>
           <a className="link link-hover">Shipping Policy</a>
           <a className="link link-hover">Return Policy</a>
         </nav>
 
-        {/* Contact */}
         <nav>
           <h6 className="footer-title">Contact</h6>
           <p>Email: support@shophub.com</p>
@@ -58,15 +55,11 @@ const Footer = () => {
           <p>Dhaka, Bangladesh</p>
         </nav>
 
-        {/* Newsletter */}
         <form>
           <h6 className="footer-title">Newsletter</h6>
-
           <fieldset className="w-80">
             <label className="label">
-              <span className="label-text">
-                Subscribe for latest offers
-              </span>
+              <span className="label-text">Subscribe for latest offers</span>
             </label>
 
             <div className="join">
@@ -83,12 +76,9 @@ const Footer = () => {
         </form>
       </div>
 
-      {/* Bottom Footer */}
       <div className="border-t border-base-300">
-        <div className="max-w-7xl mx-auto py-4 px-6 flex flex-col md:flex-row justify-between items-center gap-2">
-          <p>
-            © {new Date().getFullYear()} ShopHub. All rights reserved.
-          </p>
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-6 py-4 md:flex-row">
+          <p>Copyright {new Date().getFullYear()} ShopHub. All rights reserved.</p>
 
           <div className="flex gap-4">
             <a className="link link-hover">Privacy Policy</a>

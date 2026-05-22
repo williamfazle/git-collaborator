@@ -1,15 +1,16 @@
 import Banner from "./Banner";
-import Nabvar from "../Nabvar";
+import CategoryShowcase from "./CategoryShowcase";
+import FeatureStrip from "./FeatureStrip";
 import Products from "./Products";
 
 
 const Home = () => {
     return (
         <div>
-            <Nabvar></Nabvar>
             <Banner></Banner>
+            <FeatureStrip></FeatureStrip>
+            <CategoryShowcase></CategoryShowcase>
             <Products></Products>
-            <h1>Home Page</h1>
         </div>
     );
 };
